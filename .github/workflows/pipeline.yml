@@ -21,9 +21,6 @@ jobs:
     needs: DEV
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Run Prod Environment Webhook
         run: |
           echo "Running in Prod Environment"
