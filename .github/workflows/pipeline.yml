@@ -24,6 +24,5 @@ jobs:
       - name: Run Prod Environment Webhook
         run: |
           echo "Running in Prod Environment"
-          curl -X GET https://jsonplaceholder.typicode.com/todos/1 \
-            -H "Content-Type: application/json"
+          curl -X GET -u admin:11c965bd0e7b71e609e764bf2ac5687080 http://34.229.159.186:8080/job/newitem/build?token=1234
   
