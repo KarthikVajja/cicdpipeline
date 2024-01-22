@@ -11,15 +11,10 @@ jobs:
     environment: DEV
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Run Dev Environment Webhook
         run: |
           echo "Running in DEV Environment"
-          curl -X GET https://jsonplaceholder.typicode.com/todos/1 \
-            -H "Content-Type: application/json"
-  
+          curl -X GET http://3.90.185.105:8080/job/devHook/build?token=1234  
   PROD:
     runs-on: ubuntu-latest
     environment: PROD
